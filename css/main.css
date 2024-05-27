@@ -1,0 +1,153 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* 使容器占据全屏高度 */
+  width: 100vw; /* 使容器占据全屏宽度 */
+  text-shadow: 2px 2px 2px #6666;
+  background-position: center center; /* 将图片居中 */
+  background-repeat: no-repeat; /* 不重复图片 */
+  background-attachment: fixed; /* 固定背景图片，使其不随滚动条滚动 */
+  background-size: cover; /* 覆盖整个元素 */
+}
+
+.container {
+  text-align: center;
+}
+
+h1 {
+  margin-top: 20px;
+  margin-bottom: 30px;
+  font-size: 50px; /* 增大标题字体大小 */
+  color: #f7f7f7;
+}
+
+.group {
+  margin-bottom: 20px;
+  background-color: rgba(255, 255, 255, 0.24); /* 半透明背景 */
+  border-radius: 25px;
+  padding: 20px; /* 内边距 */
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1); /* 非线性动画 */
+  transform: scale(1); /* 初始缩放比例 */
+}
+
+.group:hover {
+  transform: scale(1.25); /* 鼠标悬停时的缩放比例 */
+}
+
+.group_id {
+  font-size: 36px;
+  margin-right: 20px;
+  color: #f0f0f0;
+}
+
+.score {
+  width: 50px;
+  font-size: 36px; /* 增大分数字体大小 */
+  margin-right: 20px; /* 增大分数与按钮之间的间距 */
+  color: #f0f0f0;
+}
+
+button {
+  padding: 10px 20px; /* 增大按钮的内边距 */
+  font-size: 20px; /* 增大按钮字体大小 */
+  cursor: pointer;
+  border: none;
+  border-radius:10px; /* 增大按钮的圆角 */
+  background-color: #4CAF50;
+  color: #f0f0f0;
+  transition: background-color 0.3s;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.reduce, .stop{
+  background-color: #F44336;
+  margin-right: 7px;
+}
+
+.clear-all{
+  background-color: #3264DC;
+  margin-right: 20px;
+  transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1); /* 非线性动画 */
+  transform: scale(1); /* 初始缩放比例 */
+}
+
+.add, .start, .apply, .show-hide {
+  margin-right: 7px;
+  transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1); /* 非线性动画 */
+  transform: scale(1); /* 初始缩放比例 */
+}
+
+.add:hover, .start:hover, .apply:hover, .show-hide:hover {
+  background-color: #45a049;
+  transform: scale(1.05); /* 鼠标悬停时的缩放比例 */
+}
+
+.reduce, .stop {
+  transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1); /* 非线性动画 */
+  transform: scale(1); /* 初始缩放比例 */
+}
+
+.reduce:hover, .stop:hover {
+  background-color: #e43434;
+  transform: scale(1.05); /* 鼠标悬停时的缩放比例 */
+}
+
+.a:hover {
+  background-color: #45a049;
+}
+
+.clear-all:hover {
+  background-color: #4263af;
+  transform: scale(1.05); /* 鼠标悬停时的缩放比例 */
+}
+
+input[type="number"] {
+  padding: 10px;
+  font-size: 20px; /* 增大输入框字体大小 */
+  font-weight: bold;
+  border: 1px solid #ffffff86;
+  border-radius: 10px;
+  text-align: center;
+  background-color: #ffffff86;
+}
+
+input[type="number"]:focus {
+  outline: none;
+  border-color: #4CAF50;
+}
+
+.rad_mun{
+  width: 50px;
+}
+
+#randomNumberDiv {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.24);
+  border-radius: 25px;
+  padding: 20px;
+  z-index: 1000;
+  position: absolute;
+  display: block;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  cursor: move;
+}
+
+.close-icon {
+  font-size: 34px;
+  cursor: pointer;
+  float: right;
+  margin-right: 10px;
+}
+
+#randomNumberDisplay{
+  font-size: 100px;
+  font-weight: bolder;
+}
